@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compare Integers</title>
+    <style>
+      /* Internal CSS */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="number"] {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      
+      button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      #result {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Compare Integers</h1>
+    <form>
+      <div>
+        <label for="num1">Enter first number:</label>
+        <input type="number" id="num1" name="num1" required>
+      </div>
+      <div>
+        <label for="num2">Enter second number:</label>
+        <input type="number" id="num2" name="num2" required>
+      </div>
+      <button type="button" onclick="compareIntegers()">Compare</button>
+    </form>
+    <div id="result"></div>
+    <script>
+      // Internal JavaScript
+      function compareIntegers() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        
+        var resultElement = document.getElementById("result");
+        
+        if (num1 > num2) {
+          resultElement.innerHTML = num1 + " is larger.";
+        } else if (num2 > num1) {
+          resultElement.innerHTML = num2 + " is larger.";
+        } else {
+          resultElement.innerHTML = "Both numbers are equal.";
+        }
+      }
+    </script>
+  </body>
+</html>

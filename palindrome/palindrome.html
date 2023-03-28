@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        input[type="text"] {
+            font-size: 2em;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 50px;
+            text-align: center;
+            width: 300px;
+        }
+
+        p {
+            font-size: 2em;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <input type="text" id="input-string" placeholder="Enter a string">
+    <p id="result"></p>
+    <script>
+        // Get the input element and result element
+        const inputElement = document.getElementById("input-string");
+        const resultElement = document.getElementById("result");
+
+        // Add event listener to the input element
+        inputElement.addEventListener("input", () => {
+            // Get the input string
+            const inputString = inputElement.value;
+
+            // Check if the input string is a palindrome
+            const reversedString = inputString.split("").reverse().join("");
+            if (inputString === reversedString) {
+                // If it's a palindrome, display in green color
+                resultElement.classList.remove("red");
+                resultElement.classList.add("green");
+            } else {
+                // If it's not a palindrome, display in red color
+                resultElement.classList.remove("green");
+                resultElement.classList.add("red");
+            }
+
+            // Update the result element with the input string
+            resultElement.textContent = inputString;
+        });
+    </script>
+</body>
+</html>

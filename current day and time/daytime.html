@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Day and Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current Day and Time</h1>
+    <p id="current-time"></p>
+    <script>
+        // Get the current date and time
+        const now = new Date();
+
+        // Get the day of the week as a string
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const dayOfWeek = daysOfWeek[now.getDay()];
+
+        // Get the current time as a string in the format HH:MM:SS
+        const hours = ("0" + now.getHours()).slice(-2);
+        const minutes = ("0" + now.getMinutes()).slice(-2);
+        const seconds = ("0" + now.getSeconds()).slice(-2);
+        const timeString = `${hours}:${minutes}:${seconds}`;
+
+        // Display the current day and time in the HTML element
+        const currentTimeElement = document.getElementById("current-time");
+        currentTimeElement.textContent = `Today is: ${dayOfWeek}. Current time is: ${timeString}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Class for red background paragraph */
+.red-background {
+    background-color: #ff9999;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ff4d4d;
+  }
+  
+  /* Class for green background paragraph */
+  .green-background {
+    background-color: #99ff99;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #33cc33;
+  }
+  
+  /* Class for blue background paragraph */
+  .blue-background {
+    background-color: #99ccff;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #3366cc;
+  }
+  
+  /* Class for yellow background paragraph */
+  .yellow-background {
+    background-color: #ffff99;
+    margin: 25px;
+    padding: 25px;
+    border: 1px solid #cccc33;
+  }
+  
+  /* Class for purple background paragraph */
+  .purple-background {
+    background-color: #cc99ff;
+    margin: 30px;
+    padding: 30px;
+    border: 1px solid #6633cc;
+  }
+  
